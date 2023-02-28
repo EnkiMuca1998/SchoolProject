@@ -13,8 +13,8 @@ class AssignmentGradeSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Assignment
-        fields = ['id', 'student_id', 'teacher_assignment', 'file', 'score', 'score_in_percentage']
-        read_only_fields = ['student_id', 'file', 'teacher_assignment', 'score_in_percentage']
+        fields = ['id', 'student_id', 'teacher_assignment', 'file', 'score', 'score_in_percentage', 'status']
+        read_only_fields = ['student_id', 'file', 'teacher_assignment', 'score_in_percentage', 'status']
 
 
 class AssignmentGradeSpecificSerializer(serializers.ModelSerializer):
