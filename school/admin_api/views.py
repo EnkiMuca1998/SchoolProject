@@ -171,7 +171,7 @@ class StudentNextYear(APIView):
         new_student = pd.read_csv('/home/enkii/Desktop/new_students.csv')
         index = new_student[(new_student['first_name'].isnull()) | (new_student['country'] == 'Russia')].index
         new_student.drop(index, inplace=True)
-        new_registration = new_student.to_dict(orient='dict')
+        new_registration = new_student.to_dict(orient='records')
         return Response(new_registration)
 
 
